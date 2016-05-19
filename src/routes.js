@@ -5,6 +5,8 @@ import App from './components/app';
 import PostIndex from './components/posts_index';
 import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show';
+import HomeForm from './components/home-form/homeForm';
+
 
 //Routes can be nested in routes...
 export default (
@@ -12,9 +14,9 @@ export default (
     <IndexRoute component={PostIndex} /> // IndexRoute --> If route is not maching any other child route render this route
     <Route path="posts/new" component={PostsNew}/>
     <Route path="posts/:id" component={PostsShow}/> {/* /:id -> this.props.params.id    Tämä tapahtuu routerin toimesta automaattisesti!!*/}
+    <Route path="homeform" component={HomeForm}/>
   </Route>
 );
-
 
 
 //Routes can be nested in routes... ESIMERKKI
@@ -25,4 +27,5 @@ export default (
 //    <Route path="greet2" component={Greeting} />
 //    <Route path="greet3" component={Greeting} />
 //  </Route>
+//
 //);

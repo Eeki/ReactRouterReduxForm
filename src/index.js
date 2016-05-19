@@ -11,9 +11,11 @@ import promise from 'redux-promise';
 // http://www.blog.com/#post/5 <-- hashHistory
 
 const createStoreWithMiddleware = applyMiddleware( promise )(createStore);
+const store = createStoreWithMiddleware(reducers, window.devToolsExtension ? window.devToolsExtension() : f => f);
+
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
+  <Provider store={store} >
     <Router history={browserHistory} routes={routes} />
   </Provider>
-  , document.querySelector('.container'));
+  , document.querySelector('.app-container'));

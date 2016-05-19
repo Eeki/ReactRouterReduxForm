@@ -30,6 +30,9 @@ class PostIndex extends Component {
           <Link to="/posts/new" className="btn btn-primary">
               Add a Post
           </Link>
+          <Link to="homeform" className="btn btn-primary">
+            Go to Home-Form
+          </Link>
         </div>
         <h3>Posts</h3>
         <ul className="list-group">
